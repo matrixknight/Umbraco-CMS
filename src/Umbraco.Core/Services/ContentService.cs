@@ -1079,7 +1079,7 @@ namespace Umbraco.Core.Services
                         foreach (var property in content.Properties.Where(x => x.PropertyType.DataTypeId == uploadDataTypeId
                                                                                && string.IsNullOrEmpty(x.Value.ToString()) == false))
                         {
-                            if (fs.FileExists(IOHelper.MapPath(property.Value.ToString())))
+                            if (fs.FileExists(fs.GetFullPath(property.Value.ToString())))
                             {
                                 var currentPath = fs.GetRelativePath(property.Value.ToString());
                                 var propertyId = copy.Properties.First(x => x.Alias == property.Alias).Id;
