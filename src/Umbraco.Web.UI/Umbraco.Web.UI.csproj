@@ -2615,8 +2615,9 @@ xcopy "$(ProjectDir)"..\packages\SqlServerCE.4.0.0.0\x86\*.* "$(TargetDir)x86\" 
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="$(MSBuildStartupDirectory)\..\src\umbraco.presentation.targets" Condition="$(BuildingInsideVisualStudio) != true" />
-  <Import Project="$(SolutionDir)umbraco.presentation.targets" Condition="$(BuildingInsideVisualStudio) == true" />
+  <!--<Import Project="$(MSBuildStartupDirectory)\..\src\umbraco.presentation.targets" Condition="$(BuildingInsideVisualStudio) != true" />-->
+  <!--<Import Project="$(SolutionDir)umbraco.presentation.targets" Condition="$(BuildingInsideVisualStudio) == true" />-->
+  <Import Project="$(SolutionDir)umbraco.presentation.targets"/>
   <PropertyGroup>
     <PostBuildEvent>
     </PostBuildEvent>
